@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define pys cout << "YES" << endl
+#define pyn cout << "NO" << endl
+#define loop(i, n) for (int i = 0; i < n; ++i)
+#define MOD 1000000007
+#define pb push_back
+#define mp make_pair
+#define nl cout << endl
+typedef vector<int> vi;
+typedef long long ll;
+
+void solve()
+{
+  int a, b, c, diff;
+  cin >> a >> b >> c;
+  diff = abs(a - b);
+  int n = 2 * diff;
+  if (a > n || b > n || c > n)
+    cout << -1;
+  else
+  {
+    if ((2 * diff) / 2 >= c)
+      cout << c + diff;
+    else
+      cout << c - diff;
+  }
+  nl;
+}
+
+int main()
+{
+  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+  srand(chrono::high_resolution_clock::now().time_since_epoch().count());
+
+  int t = 1;
+  cin >> t;
+  while (t--)
+  {
+    solve();
+  }
+
+  return 0;
+}
+
+ 
