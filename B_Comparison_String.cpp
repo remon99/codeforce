@@ -13,16 +13,22 @@ typedef long long ll;
 void solve()
 {
     int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++){
-        cin>>a[i];
+    string s;
+    cin>>n>>s;
+    int cnt=0,ans=0;
+    char c=s[0];
+    loop(i,n){
+        if(c==s[i]){
+            cnt++;
+        }
+        else{
+            ans=max(cnt,ans);
+            c=s[i];
+            cnt=1;
+        }
     }
-    
-    for(int i=0;i<n;i++){
-        cout<<n-a[i]+1<<" ";
-    }
-    cout<<endl;
+     ans=max(cnt,ans);
+    cout<<ans+1<<endl;
 }
  
 int main()
